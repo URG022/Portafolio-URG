@@ -272,7 +272,7 @@ Este proyecto es de uso personal. Siéntete libre de usar como referencia o insp
 
 **Ulises Rivera Guillén**
 
-Estudiante de 4to año en Ingeniería en Desarrollo de Software (ITCA-FEPADE).
+Estudiante de 4to año en Ingeniería en Desarrollo de Software (ITCA-FEPADE)
 
 **Especialidades:**
 - Backend: C#, .NET, SQL Server
