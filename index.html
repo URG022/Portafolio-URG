@@ -1,333 +1,608 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ulises Guillén | Ingeniero de Software</title>
-    <!-- Enlace al archivo CSS externo -->
+    <title>Ulises Rivera Guillén | Desarrollador de Software</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
+
+    <header id="header">
         <nav class="container">
-            <div class="logo">Ulises Guillén</div>
+            <div class="logo">URG<span class="logo-dot">.</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#tools">Herramientas</a></li>
+                <li><a href="#tools">Habilidades</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-container">
+        <div class="hero-bg-text">DEV</div>
+        <div class="hero-container container">
             <div class="hero-text">
-                <h1>Hi – I'm Ulises Guillén</h1>
-                <h2 class="highlight">SOFTWARE DEVELOPER</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ratione similique expedita perspiciatis perferendis velit omnis! Non sint nemo fugit, saepe architecto temporibus optio facilis voluptatibus eius inventore debitis quidem.
-                </p>
+                <p class="hero-eyebrow">👋 Hola, soy</p>
+                <h1>Ulises Rivera<br><span class="hero-accent">Guillén</span></h1>
+                <h2 class="hero-role">Desarrollador de Software <span class="role-dot">·</span> Backend &amp; Frontend
+                </h2>
+                <p class="hero-desc">Estudiante de Ingeniería en Desarrollo de Software (4to año) con sólida base en
+                    backend con <strong>C# (.NET)</strong> y <strong>SQL Server</strong>, y habilidades frontend con
+                    <strong>HTML5, CSS3 y JavaScript</strong>. Apasionado por escribir código limpio y resolver
+                    problemas técnicos complejos.</p>
                 <div class="hero-buttons">
-                    <a href="#about" class="btn btn-primary">About Me</a>
-                    <a href="#contact" class="btn btn-secondary">Contact</a>
+                    <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contact" class="btn btn-secondary">Contáctame</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Proyectos</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Años estudiando</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Tecnologías</span></div>
                 </div>
             </div>
             <div class="hero-photo">
-                <div class="photo-border">
-                    <img src="./img/URG2.jpg" alt="Ulises Guillén">
-                </div>
+                <div class="photo-ring"></div>
+                <div class="photo-border"><img src="./img/URG2.jpg" alt="Ulises Rivera Guillén"></div>
+                <div class="photo-badge"><span>Disponible para trabajar</span><span class="badge-dot"></span></div>
             </div>
+        </div>
+        <div class="hero-scroll-hint"><span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section professional-summary-section">
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="summary-header">
-                <h2 class="section-title">Resumen Profesional</h2>
-                <p class="summary-lead">Desarrollador de software apasionado por la innovación, la calidad y el impacto real. Me especializo en crear soluciones tecnológicas modernas, eficientes y escalables, con enfoque en el usuario y el trabajo en equipo.</p>
+            <div class="section-header">
+                <span class="section-tag">01 — Sobre mí</span>
+                <h2 class="section-title">Resumen <em>Profesional</em></h2>
             </div>
-            <div class="highlights-grid">
-                <div class="highlight-card">
-                    <div class="highlight-icon">💡</div>
-                    <h3>Creatividad</h3>
-                    <p>Pienso fuera de la caja y aporto ideas innovadoras a cada proyecto.</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Soy estudiante de <strong>Ingeniería en Desarrollo de Software</strong> en ITCA-FEPADE,
+                        actualmente cursando el 4to año. Tengo experiencia en desarrollo de aplicaciones de escritorio y
+                        web, con enfoque en backend usando <strong>C# y SQL Server</strong>.</p>
+                    <p>Me apasiona escribir código limpio, optimizar bases de datos y construir soluciones que resuelvan
+                        problemas reales. Estoy buscando mi primera oportunidad como desarrollador <strong>Junior o en
+                            prácticas</strong> para crecer profesionalmente.</p>
+                    <div class="about-info">
+                        <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>El Salvador</span></div>
+                        <div class="info-item"><i class="fas fa-graduation-cap"></i><span>ITCA-FEPADE — Ing. Desarrollo
+                                de Software</span></div>
+                        <div class="info-item"><i class="fas fa-language"></i><span>Español (Nativo) · Inglés
+                                (Intermedio)</span></div>
+                        <div class="info-item"><i
+                                class="fas fa-envelope"></i><span>ulisesriveraguillen519@gmail.com</span></div>
+                    </div>
                 </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🤝</div>
-                    <h3>Trabajo en equipo</h3>
-                    <p>Colaboro y comunico de forma efectiva para lograr objetivos comunes.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🚀</div>
-                    <h3>Resolución de problemas</h3>
-                    <p>Me apasiona enfrentar retos técnicos y encontrar soluciones eficientes.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🌱</div>
-                    <h3>Aprendizaje continuo</h3>
-                    <p>Siempre busco mejorar y mantenerme actualizado en nuevas tecnologías.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🧠</div>
-                    <h3>Pensamiento analítico</h3>
-                    <p>Analizo problemas complejos y tomo decisiones fundamentadas para lograr resultados óptimos.</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">🎯</div>
-                    <h3>Orientación a resultados</h3>
-                    <p>Enfocado en cumplir objetivos y entregar soluciones de alto impacto para los clientes y usuarios.</p>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">💡</div>
+                        <h3>Creatividad</h3>
+                        <p>Pienso fuera de la caja y aporto ideas innovadoras a cada proyecto.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🤝</div>
+                        <h3>Trabajo en equipo</h3>
+                        <p>Colaboro y comunico de forma efectiva para lograr objetivos comunes.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🚀</div>
+                        <h3>Resolución de problemas</h3>
+                        <p>Me apasiona enfrentar retos técnicos y encontrar soluciones eficientes.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🌱</div>
+                        <h3>Aprendizaje continuo</h3>
+                        <p>Siempre busco mejorar y mantenerme actualizado en nuevas tecnologías.</p>
+                    </div>
                 </div>
             </div>
-        
         </div>
     </section>
 
-    <!-- Tools Section -->
     <section id="tools" class="tools-section">
         <div class="container">
-            <h2 class="section-title">Herramientas y Tecnologías</h2>
-            <div class="tools-container">
-                <div class="tools-scroll">
-                    <div class="tool-item">
-                        <div class="tool-icon html">
-                            <!-- HTML SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 4L8.09 27.36L16 30L23.91 27.36L26 4H6Z" fill="#E44D26"/>
-                                <path d="M16 27.13V6.17H24.18L22.36 25.13L16 27.13Z" fill="#F16529"/>
-                                <path d="M16 13.09H10.47L10.67 15.22H16V13.09ZM16 9.22H10.13L10.33 11.35H16V9.22ZM16 20.13L16 18.09H13.13L13.23 19.13L16 20.13ZM16 23.09L11.91 21.78L11.67 19.22H13.8L13.93 20.65L16 21.22V23.09Z" fill="#EBEBEB"/>
-                                <path d="M16 13.09V15.22H21.33L21.13 13.09H16ZM16 9.22V11.35H21.67L21.87 9.22H16ZM16 18.09V20.13L18.07 19.13L18.2 17.78H16ZM16 21.22V23.09L20.09 21.78L20.33 19.22H18.2L18.07 20.65L16 21.22Z" fill="#FFF"/>
-                            </svg>
+            <div class="section-header">
+                <span class="section-tag">02 — Habilidades</span>
+                <h2 class="section-title">Tecnologías <em>&amp; Herramientas</em></h2>
+            </div>
+            <div class="skills-wrapper">
+
+                <!-- LENGUAJES -->
+                <div class="skills-group">
+                    <h3 class="skills-group-title"><i class="fas fa-code"></i> Lenguajes</h3>
+                    <div class="skills-track-wrapper">
+                        <div class="skills-track" id="track-lang">
+
+                            <!-- C# -->
+                            <div class="skill-card" data-tip="C# · .NET">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#9B4F96"
+                                            d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z" />
+                                        <path fill="#68217A"
+                                            d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z" />
+                                        <path fill="#fff"
+                                            d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-13-7.6z" />
+                                        <path fill="#fff"
+                                            d="M97 66.4v-5.2l-3.6 2.1-3.6-6.3 3.6-2.1-3.6-2.1 3.6-6.3 3.6 2.1v-5.2h7.2v5.2l3.6-2.1 3.6 6.3-3.6 2.1 3.6 2.1-3.6 6.3-3.6-2.1v5.2H97zm14.4 0v-5.2l-3.6 2.1-3.6-6.3 3.6-2.1-3.6-2.1 3.6-6.3 3.6 2.1v-5.2h7.2v5.2l3.6-2.1 3.6 6.3-3.6 2.1 3.6 2.1-3.6 6.3-3.6-2.1v5.2h-7.2z" />
+                                    </svg>
+                                    <span class="skill-name">C#</span>
+                                    <span class="skill-level primary-badge">Principal</span>
+                                </div>
+                            </div>
+
+                            <!-- SQL Server -->
+                            <div class="skill-card" data-tip="T-SQL · SQL Server">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#CC2927"
+                                            d="M64 0C28.7 0 0 14.3 0 32v64c0 17.7 28.7 32 64 32s64-14.3 64-32V32C128 14.3 99.3 0 64 0z" />
+                                        <ellipse fill="#fff" cx="64" cy="32" rx="56" ry="16" />
+                                        <path fill="#e8e8e8"
+                                            d="M8 52c0 8.8 25.1 16 56 16s56-7.2 56-16V32c0 8.8-25.1 16-56 16S8 40.8 8 32v20z" />
+                                        <path fill="#e8e8e8"
+                                            d="M8 72c0 8.8 25.1 16 56 16s56-7.2 56-16V52c0 8.8-25.1 16-56 16S8 60.8 8 52v20z" />
+                                        <path fill="#e8e8e8"
+                                            d="M8 92c0 8.8 25.1 16 56 16s56-7.2 56-16V72c0 8.8-25.1 16-56 16S8 80.8 8 72v20z" />
+                                    </svg>
+                                    <span class="skill-name">SQL Server</span>
+                                    <span class="skill-level primary-badge">Principal</span>
+                                </div>
+                            </div>
+
+                            <!-- JavaScript -->
+                            <div class="skill-card" data-tip="JavaScript ES6+">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z" />
+                                        <path fill="#323330"
+                                            d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z" />
+                                    </svg>
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level mid-badge">Intermedio</span>
+                                </div>
+                            </div>
+
+                            <!-- HTML5 -->
+                            <div class="skill-card" data-tip="HTML5">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#E44D26"
+                                            d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z" />
+                                        <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z" />
+                                        <path fill="#EBEBEB"
+                                            d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z" />
+                                        <path fill="#fff"
+                                            d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z" />
+                                    </svg>
+                                    <span class="skill-name">HTML5</span>
+                                    <span class="skill-level mid-badge">Intermedio</span>
+                                </div>
+                            </div>
+
+                            <!-- CSS3 -->
+                            <div class="skill-card" data-tip="CSS3">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#1572B6"
+                                            d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z" />
+                                        <path fill="#33A9DC" d="M64 116.8l36.378-10.086 8.559-95.878H64z" />
+                                        <path fill="#fff"
+                                            d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z" />
+                                        <path fill="#EBEBEB"
+                                            d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z" />
+                                    </svg>
+                                    <span class="skill-name">CSS3</span>
+                                    <span class="skill-level mid-badge">Intermedio</span>
+                                </div>
+                            </div>
+
+                            <!-- Java -->
+                            <div class="skill-card" data-tip="Java · JSF · Facelets">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#0074BD"
+                                            d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z" />
+                                        <path fill="#EA2D2E"
+                                            d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z" />
+                                        <path fill="#0074BD"
+                                            d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.556 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z" />
+                                        <path fill="#EA2D2E"
+                                            d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z" />
+                                        <path fill="#0074BD"
+                                            d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z" />
+                                    </svg>
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-level mid-badge">Intermedio</span>
+                                </div>
+                            </div>
+
+                            <!-- React -->
+                            <div class="skill-card" data-tip="React · SPA">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="#61DAFB">
+                                            <circle cx="64" cy="64" r="11.4" />
+                                            <path
+                                                d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2-2.2-4.1-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 70.5 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9.2-17.5c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 9.4 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z" />
+                                        </g>
+                                    </svg>
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-level mid-badge">Intermedio</span>
+                                </div>
+                            </div>
+
+                            <!-- Bootstrap — CORREGIDO con la B real -->
+                            <div class="skill-card" data-tip="Bootstrap 5">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#7952B3"
+                                            d="M11.7 0h104.6c6.5 0 11.7 5.3 11.7 11.7v104.6c0 6.5-5.3 11.7-11.7 11.7H11.7C5.3 128 0 122.7 0 116.3V11.7C0 5.3 5.3 0 11.7 0z" />
+                                        <path fill="#fff"
+                                            d="M39.7 96.5V32h26.2c4.8 0 8.9.7 12.2 2.1 3.3 1.4 5.8 3.4 7.5 6s2.5 5.7 2.5 9.2c0 2.8-.6 5.3-1.9 7.5-1.3 2.2-3.1 4-5.5 5.3-2.4 1.3-5.2 2.1-8.4 2.3v.5c3.5.2 6.6 1 9.3 2.5 2.7 1.5 4.8 3.5 6.4 6.1 1.5 2.6 2.3 5.6 2.3 9.1 0 3.7-.9 6.9-2.6 9.7-1.8 2.8-4.3 4.9-7.7 6.5-3.4 1.6-7.5 2.4-12.4 2.4H39.7zm14.3-38h10c3.7 0 6.5-.8 8.5-2.3 2-1.5 3-3.7 3-6.7 0-3-.9-5.2-2.8-6.7-1.9-1.5-4.7-2.3-8.6-2.3H54v18zm0 27.3h11.2c4.2 0 7.3-.9 9.4-2.6 2.1-1.7 3.1-4.2 3.1-7.4 0-3.2-1.1-5.7-3.2-7.4-2.1-1.7-5.3-2.6-9.5-2.6H54v20z" />
+                                    </svg>
+                                    <span class="skill-name">Bootstrap</span>
+                                    <span class="skill-level mid-badge">Intermedio</span>
+                                </div>
+                            </div>
+
+                            <!-- Git -->
+                            <div class="skill-card" data-tip="Git · Control de versiones">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#F34F29"
+                                            d="M124.742 58.378L69.625 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.685 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993L87.42 55.529c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679-3.78 3.78-9.901 3.78-13.683 0-2.842-2.844-3.545-7.019-2.105-10.521L68.578 47.933l-.002 34.341a9.732 9.732 0 012.559 1.828c3.779 3.777 3.779 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.109c-2.862-2.857-3.55-7.06-2.083-10.576L41.056 20.333 3.264 58.123c-3.175 3.177-3.175 8.325 0 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858c3.174-3.176 3.174-8.327.004-11.501z" />
+                                    </svg>
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-level mid-badge">Intermedio</span>
+                                </div>
+                            </div>
+
+                            <!-- PHP — CORREGIDO con logo real -->
+                            <div class="skill-card" data-tip="PHP · Básico">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse fill="#8892be" cx="64" cy="64" rx="60" ry="34" />
+                                        <ellipse fill="#4f5b93" cx="64" cy="64" rx="52" ry="26" />
+                                        <path fill="#fff"
+                                            d="M42.3 57.4H36l-4.4 22h5.5l1.5-7.4h5c2.9 0 5.1-.7 6.6-2 1.5-1.4 2.5-3.3 2.9-5.8.4-2.3 0-4-.9-5.2-1.1-1.1-2.9-1.6-5.9-1.6zm1.5 7.8c-.4 2-1.8 3-4.1 3H36l1.5-7.3h3.7c1.2 0 2 .3 2.5.8.5.6.5 1.8.1 3.5zm20.5-7.8H58l-4.4 22h5.5l1.5-7.4h5c2.9 0 5.1-.7 6.6-2 1.5-1.4 2.5-3.3 2.9-5.8.4-2.3 0-4-.9-5.2-1.1-1.1-2.9-1.6-5.9-1.6zm1.5 7.8c-.4 2-1.8 3-4.1 3h-3.6l1.5-7.3h3.7c1.2 0 2 .3 2.5.8.4.6.4 1.8 0 3.5zm21.5-7.8l-3.4 13.8H79l.8-4.3h-5.4l-.8 4.3h-5.9l3.4-13.8h6l-1.6 6h5.4l1.5-6h5.8z" />
+                                    </svg>
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-level warm-badge">Básico</span>
+                                </div>
+                            </div>
+
                         </div>
-                        <span class="tool-name">HTML</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon css">
-                            <!-- CSS SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 4L8.09 27.36L16 30L23.91 27.36L26 4H6Z" fill="#1572B6"/>
-                                <path d="M16 27.13V6.17H24.18L22.36 25.13L16 27.13Z" fill="#33A9DC"/>
-                                <path d="M16 13.09H10.47L10.67 15.22H16V13.09ZM16 9.22H10.13L10.33 11.35H16V9.22ZM16 20.13L16 18.09H13.13L13.23 19.13L16 20.13ZM16 23.09L11.91 21.78L11.67 19.22H13.8L13.93 20.65L16 21.22V23.09Z" fill="#EBEBEB"/>
-                                <path d="M16 13.09V15.22H21.33L21.13 13.09H16ZM16 9.22V11.35H21.67L21.87 9.22H16ZM16 18.09V20.13L18.07 19.13L18.2 17.78H16ZM16 21.22V23.09L20.09 21.78L20.33 19.22H18.2L18.07 20.65L16 21.22Z" fill="#FFF"/>
-                            </svg>
-                        </div>
-                        <span class="tool-name">CSS</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon csharp">
-                            <!-- C# SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="16" cy="16" r="16" fill="#68217A"/>
-                                <text x="8" y="22" font-size="14" fill="#fff" font-family="Arial, Helvetica, sans-serif">C#</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">C#</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon java">
-                            <!-- Java SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="16" cy="16" rx="16" ry="16" fill="#007396"/>
-                                <text x="7" y="22" font-size="14" fill="#fff" font-family="Arial, Helvetica, sans-serif">Java</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">Java</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon python">
-                            <!-- Python SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="16" fill="#3776AB"/>
-                                <text x="4" y="22" font-size="14" fill="#FFD43B" font-family="Arial, Helvetica, sans-serif">Py</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">Python</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon bootstrap">
-                            <!-- Bootstrap SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="16" fill="#7952B3"/>
-                                <text x="5" y="22" font-size="14" fill="#fff" font-family="Arial, Helvetica, sans-serif">BS</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">Bootstrap</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon javascript">
-                            <!-- JavaScript SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="16" fill="#F7DF1E"/>
-                                <text x="4" y="22" font-size="14" fill="#222" font-family="Arial, Helvetica, sans-serif">JS</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">JavaScript</span>
-                    </div>
-                    <!-- Segundo set de herramientas para scroll infinito -->
-                    <div class="tool-item">
-                        <div class="tool-icon html">
-                            <!-- HTML SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 4L8.09 27.36L16 30L23.91 27.36L26 4H6Z" fill="#E44D26"/>
-                                <path d="M16 27.13V6.17H24.18L22.36 25.13L16 27.13Z" fill="#F16529"/>
-                                <path d="M16 13.09H10.47L10.67 15.22H16V13.09ZM16 9.22H10.13L10.33 11.35H16V9.22ZM16 20.13L16 18.09H13.13L13.23 19.13L16 20.13ZM16 23.09L11.91 21.78L11.67 19.22H13.8L13.93 20.65L16 21.22V23.09Z" fill="#EBEBEB"/>
-                                <path d="M16 13.09V15.22H21.33L21.13 13.09H16ZM16 9.22V11.35H21.67L21.87 9.22H16ZM16 18.09V20.13L18.07 19.13L18.2 17.78H16ZM16 21.22V23.09L20.09 21.78L20.33 19.22H18.2L18.07 20.65L16 21.22Z" fill="#FFF"/>
-                            </svg>
-                        </div>
-                        <span class="tool-name">HTML</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon css">
-                            <!-- CSS SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 4L8.09 27.36L16 30L23.91 27.36L26 4H6Z" fill="#1572B6"/>
-                                <path d="M16 27.13V6.17H24.18L22.36 25.13L16 27.13Z" fill="#33A9DC"/>
-                                <path d="M16 13.09H10.47L10.67 15.22H16V13.09ZM16 9.22H10.13L10.33 11.35H16V9.22ZM16 20.13L16 18.09H13.13L13.23 19.13L16 20.13ZM16 23.09L11.91 21.78L11.67 19.22H13.8L13.93 20.65L16 21.22V23.09Z" fill="#EBEBEB"/>
-                                <path d="M16 13.09V15.22H21.33L21.13 13.09H16ZM16 9.22V11.35H21.67L21.87 9.22H16ZM16 18.09V20.13L18.07 19.13L18.2 17.78H16ZM16 21.22V23.09L20.09 21.78L20.33 19.22H18.2L18.07 20.65L16 21.22Z" fill="#FFF"/>
-                            </svg>
-                        </div>
-                        <span class="tool-name">CSS</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon csharp">
-                            <!-- C# SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="16" cy="16" r="16" fill="#68217A"/>
-                                <text x="8" y="22" font-size="14" fill="#fff" font-family="Arial, Helvetica, sans-serif">C#</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">C#</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon java">
-                            <!-- Java SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="16" cy="16" rx="16" ry="16" fill="#007396"/>
-                                <text x="7" y="22" font-size="14" fill="#fff" font-family="Arial, Helvetica, sans-serif">Java</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">Java</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon python">
-                            <!-- Python SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="16" fill="#3776AB"/>
-                                <text x="4" y="22" font-size="14" fill="#FFD43B" font-family="Arial, Helvetica, sans-serif">Py</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">Python</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon bootstrap">
-                            <!-- Bootstrap SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="16" fill="#7952B3"/>
-                                <text x="5" y="22" font-size="14" fill="#fff" font-family="Arial, Helvetica, sans-serif">BS</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">Bootstrap</span>
-                    </div>
-                    <div class="tool-item">
-                        <div class="tool-icon javascript">
-                            <!-- JavaScript SVG -->
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="32" height="32" rx="16" fill="#F7DF1E"/>
-                                <text x="4" y="22" font-size="14" fill="#222" font-family="Arial, Helvetica, sans-serif">JS</text>
-                            </svg>
-                        </div>
-                        <span class="tool-name">JavaScript</span>
                     </div>
                 </div>
+
+                <!-- HERRAMIENTAS -->
+                <div class="skills-group">
+                    <h3 class="skills-group-title"><i class="fas fa-tools"></i> Herramientas &amp; Entornos</h3>
+                    <div class="skills-track-wrapper">
+                        <div class="skills-track" id="track-tools">
+
+                            <!-- Visual Studio — CORREGIDO logo oficial con gradiente -->
+                            <div class="skill-card" data-tip="Visual Studio · .NET">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <defs>
+                                            <linearGradient id="vs-g" x1="64" y1="4" x2="64" y2="124"
+                                                gradientUnits="userSpaceOnUse">
+                                                <stop offset="0" stop-color="#c179f8" />
+                                                <stop offset="1" stop-color="#7b3fc4" />
+                                            </linearGradient>
+                                        </defs>
+                                        <path fill="url(#vs-g)"
+                                            d="M94.7 8.4L50.4 56.2 22.8 33 8 41v46l14.8 8 27.6-23.2L94.7 119.6 119.2 107.3V20.7z" />
+                                        <path fill="rgba(255,255,255,0.18)" d="M94.7 8.4v111.2l24.5-12.3V20.7z" />
+                                        <path fill="rgba(255,255,255,0.22)"
+                                            d="M8 41l42.4 40.4 44.3-73.4L119.2 20.7 51.2 96 22.8 120 8 111.6z" />
+                                        <path fill="rgba(0,0,0,0.12)" d="M22.8 120L8 111.6V41l14.8 8z" />
+                                    </svg>
+                                    <span class="skill-name">Visual Studio</span>
+                                    <span class="skill-level primary-badge">Principal</span>
+                                </div>
+                            </div>
+
+                            <!-- VS Code — CORREGIDO logo oficial -->
+                            <div class="skill-card" data-tip="VS Code · Editor">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <mask id="vsc-m">
+                                            <path fill="#fff"
+                                                d="M90.8 127.1a10.7 10.7 0 006.5-.3l25.9-12.9c2.9-1.5 4.8-4.6 4.8-7.9V21.9c0-3.3-1.9-6.4-4.8-7.9L97.3 1.1A10.7 10.7 0 0086.4 2.2L2.3 71a7.1 7.1 0 00-.5 10.6l4 4a7.1 7.1 0 008.6.9L95.6 30.8a3.2 3.2 0 014.7 2.6v89.2a3.2 3.2 0 01-2.4 3.6z" />
+                                        </mask>
+                                        <path fill="#0065a9"
+                                            d="M123.1 14L97.3 1.1A10.7 10.7 0 0086.4 2.2L2.3 71a7.1 7.1 0 00-.5 10.6l4 4a7.1 7.1 0 008.6.9L95.6 30.8a3.2 3.2 0 014.7 2.6v89.2a3.2 3.2 0 01-2.4 3.6l-4.1 1.9a10.7 10.7 0 006.5-.3l25.9-12.9c2.9-1.5 4.8-4.6 4.8-7.9V21.9c0-3.3-1.9-6.4-4.8-7.9z" />
+                                        <path fill="#007acc"
+                                            d="M97.3 1.1A10.7 10.7 0 0086.4 2.2L2.3 71a7.1 7.1 0 00-.5 10.6l4 4a7.1 7.1 0 008.6.9L95.6 30.8a3.2 3.2 0 014.7 2.6v89.2a3.2 3.2 0 01-2.4 3.6l2.1-1c1.4-.6 2.4-2 2.4-3.6V3.7A3.2 3.2 0 0097.3 1.1z" />
+                                        <path fill="#1f9cf0"
+                                            d="M97.3 126.9c1.4-.6 2.4-2 2.4-3.6V32.1a3.2 3.2 0 00-4.1-3.1L14.5 86.6a7.1 7.1 0 01-8.6-.9l-4-4a7.1 7.1 0 00.5 10.6L86.4 125.8a10.7 10.7 0 0010.9-1z"
+                                            mask="url(#vsc-m)" />
+                                    </svg>
+                                    <span class="skill-name">VS Code</span>
+                                    <span class="skill-level mid-badge">Frecuente</span>
+                                </div>
+                            </div>
+
+                            <!-- SQL Server SSMS -->
+                            <div class="skill-card" data-tip="SSMS · SQL Server">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#CC2927"
+                                            d="M64 0C28.7 0 0 14.3 0 32v64c0 17.7 28.7 32 64 32s64-14.3 64-32V32C128 14.3 99.3 0 64 0z" />
+                                        <ellipse fill="#fff" cx="64" cy="32" rx="56" ry="16" />
+                                        <path fill="#e8e8e8"
+                                            d="M8 52c0 8.8 25.1 16 56 16s56-7.2 56-16V32c0 8.8-25.1 16-56 16S8 40.8 8 32v20z" />
+                                        <path fill="#e8e8e8"
+                                            d="M8 72c0 8.8 25.1 16 56 16s56-7.2 56-16V52c0 8.8-25.1 16-56 16S8 60.8 8 52v20z" />
+                                        <path fill="#e8e8e8"
+                                            d="M8 92c0 8.8 25.1 16 56 16s56-7.2 56-16V72c0 8.8-25.1 16-56 16S8 80.8 8 72v20z" />
+                                    </svg>
+                                    <span class="skill-name">SQL Server</span>
+                                    <span class="skill-level primary-badge">Principal</span>
+                                </div>
+                            </div>
+
+                            
+
+                            <!-- GitHub -->
+                            <div class="skill-card" data-tip="GitHub · Repository">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#fff"
+                                            d="M64 5.1C32 5.1 5.9 31.2 5.9 63.2c0 25.6 16.6 47.3 39.6 55 2.9.5 4-1.3 4-2.8 0-1.4-.1-6-.1-12.1-16.2 3.5-19.6-6.8-19.6-6.8-2.6-6.7-6.4-8.5-6.4-8.5-5.3-3.6.4-3.5.4-3.5 5.8.4 8.9 6 8.9 6 5.2 8.9 13.6 6.3 16.9 4.8.5-3.7 2-6.3 3.7-7.7-12.9-1.5-26.4-6.4-26.4-28.7 0-6.3 2.3-11.5 6-15.6-.6-1.5-2.6-7.4.6-15.3 0 0 4.9-1.6 16 5 4.6-1.3 9.6-1.9 14.5-1.9 4.9 0 9.9.7 14.5 1.9 11.1-6.6 16-5 16-5 3.1 7.9 1.2 13.8.6 15.3 3.7 4.1 6 9.3 6 15.6 0 22.3-13.6 27.2-26.5 28.6 2.1 1.8 4 5.3 4 10.7 0 7.8-.1 14.1-.1 16 0 1.6 1.1 3.4 4 2.8C105.5 110.5 122 88.8 122 63.2 122 31.2 96 5.1 64 5.1z" />
+                                    </svg>
+                                    <span class="skill-name">GitHub</span>
+                                    <span class="skill-level mid-badge">Frecuente</span>
+                                </div>
+                            </div>
+
+                            <!-- Docker — CORREGIDO con contenedores reales -->
+                            <div class="skill-card" data-tip="Docker · Containers">
+                                <div class="skill-card-inner">
+                                    <svg class="skill-svg" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#2496ed"
+                                            d="M124.8 52.1c-2.8-1.9-9.2-2.6-14-1.7-.6-4.6-3.2-8.6-7.9-12.2l-2.6-1.8-1.8 2.6c-2.3 3.6-3.4 8.5-3.1 13.2-.1.1-.3.2-.4.3-1.4.7-3.8 1.4-7.1 1.4H3.6c-.8 5.3-1 16.3 5.7 25.3 5.3 7 13.3 10.6 23.7 10.6 22.5 0 39.2-10.4 47.1-29.3 3.1.1 9.7.2 13.1-6.5.2-.3 1.3-2.4 1.6-3.2l-1-.4.1-.3z" />
+                                        <!-- row 3 -->
+                                        <rect fill="#fff" x="7" y="51" width="9" height="9" rx="1" />
+                                        <rect fill="#fff" x="18" y="51" width="9" height="9" rx="1" />
+                                        <rect fill="#fff" x="29" y="51" width="9" height="9" rx="1" />
+                                        <rect fill="#fff" x="40" y="51" width="9" height="9" rx="1" />
+                                        <rect fill="#fff" x="51" y="51" width="9" height="9" rx="1" />
+                                        <!-- row 2 -->
+                                        <rect fill="#fff" x="18" y="40" width="9" height="9" rx="1" />
+                                        <rect fill="#fff" x="29" y="40" width="9" height="9" rx="1" />
+                                        <rect fill="#fff" x="40" y="40" width="9" height="9" rx="1" />
+                                        <rect fill="#fff" x="51" y="40" width="9" height="9" rx="1" />
+                                        <!-- row 1 -->
+                                        <rect fill="#fff" x="29" y="29" width="9" height="9" rx="1" />
+                                    </svg>
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-level warm-badge">Básico</span>
+                                </div>
+                            </div>
+
+                        
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HABILIDADES BLANDAS -->
+                <div class="skills-group">
+                    <h3 class="skills-group-title"><i class="fas fa-user-check"></i> Habilidades Blandas</h3>
+                    <div class="skills-track-wrapper">
+                        <div class="skills-track" id="track-soft">
+                            <div class="skill-card" data-tip="Problem Solving">
+                                <div class="skill-card-inner"><svg class="skill-svg" viewBox="0 0 128 128"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#f59e0b"
+                                            d="M64 4c33.3 0 60 26.7 60 60s-26.7 60-60 60S4 97.3 4 64 30.7 4 64 4m0-4C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0z" />
+                                        <path fill="#f59e0b"
+                                            d="M64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm0 24c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" />
+                                        <rect fill="#f59e0b" x="61" y="20" width="6" height="16" />
+                                    </svg><span class="skill-name">Resolución de problemas</span><span
+                                        class="skill-level warm-badge">Blanda</span></div>
+                            </div>
+                            <div class="skill-card" data-tip="Teamwork">
+                                <div class="skill-card-inner"><svg class="skill-svg" viewBox="0 0 128 128"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#f59e0b"
+                                            d="M40 44c7.7 0 14-6.3 14-14s-6.3-14-14-14-14 6.3-14 14 6.3 14 14 14m0-20c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" />
+                                        <path fill="#f59e0b"
+                                            d="M88 44c7.7 0 14-6.3 14-14s-6.3-14-14-14-14 6.3-14 14 6.3 14 14 14m0-20c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" />
+                                        <path fill="#f59e0b"
+                                            d="M64 64c11 0 20-9 20-20s-9-20-20-20-20 9-20 20 9 20 20 20m0-32c6.6 0 12 5.4 12 12s-5.4 12-12 12-12-5.4-12-12 5.4-12 12-12z" />
+                                        <path fill="#f59e0b" d="M64 88c-22 0-40 12-40 27v13h80V115c0-15-18-27-40-27z" />
+                                    </svg><span class="skill-name">Trabajo en equipo</span><span
+                                        class="skill-level warm-badge">Blanda</span></div>
+                            </div>
+                            <div class="skill-card" data-tip="Adaptability">
+                                <div class="skill-card-inner"><svg class="skill-svg" viewBox="0 0 128 128"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#f59e0b"
+                                            d="M64 8C33.1 8 8 33.1 8 64s25.1 56 56 56 56-25.1 56-56S94.9 8 64 8m0 104c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48z" />
+                                        <path fill="#f59e0b" d="M72 44H56v16h16V44zm8 24H56v16h24V68z" />
+                                    </svg><span class="skill-name">Adaptabilidad</span><span
+                                        class="skill-level warm-badge">Blanda</span></div>
+                            </div>
+                            <div class="skill-card" data-tip="Communication">
+                                <div class="skill-card-inner"><svg class="skill-svg" viewBox="0 0 128 128"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#f59e0b"
+                                            d="M64 8C33.1 8 8 33.1 8 64s25.1 56 56 56 56-25.1 56-56S94.9 8 64 8m0 104c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48z" />
+                                        <circle fill="#f59e0b" cx="48" cy="56" r="5" />
+                                        <circle fill="#f59e0b" cx="80" cy="56" r="5" />
+                                        <path fill="#f59e0b" d="M45 72h38v3H45z" />
+                                    </svg><span class="skill-name">Comunicación efectiva</span><span
+                                        class="skill-level warm-badge">Blanda</span></div>
+                            </div>
+                            <div class="skill-card" data-tip="Continuous Learning">
+                                <div class="skill-card-inner"><svg class="skill-svg" viewBox="0 0 128 128"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#f59e0b"
+                                            d="M64 12L20 36v44c0 20 22 32 44 36 22-4 44-16 44-36V36L64 12m0 4.8l38.4 20.4v40.8c0 16.5-19 28-38.4 31.5-19.4-3.5-38.4-15-38.4-31.5V37.2L64 16.8z" />
+                                        <path fill="#f59e0b"
+                                            d="M64 44c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20m0 32c-6.6 0-12-5.4-12-12s5.4-12 12-12 12 5.4 12 12-5.4 12-12 12z" />
+                                    </svg><span class="skill-name">Aprendizaje continuo</span><span
+                                        class="skill-level warm-badge">Blanda</span></div>
+                            </div>
+                            <div class="skill-card" data-tip="Analytical Thinking">
+                                <div class="skill-card-inner"><svg class="skill-svg" viewBox="0 0 128 128"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#f59e0b"
+                                            d="M112 20H16c-2.2 0-4 1.8-4 4v80c0 2.2 1.8 4 4 4h96c2.2 0 4-1.8 4-4V24c0-2.2-1.8-4-4-4m-4 76H20V28h88v68z" />
+                                        <rect fill="#f59e0b" x="28" y="52" width="8" height="24" />
+                                        <rect fill="#f59e0b" x="44" y="40" width="8" height="36" />
+                                        <rect fill="#f59e0b" x="60" y="44" width="8" height="32" />
+                                        <rect fill="#f59e0b" x="76" y="36" width="8" height="40" />
+                                        <rect fill="#f59e0b" x="92" y="48" width="8" height="28" />
+                                    </svg><span class="skill-name">Pensamiento analítico</span><span
+                                        class="skill-level warm-badge">Blanda</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="section-header">
+                <span class="section-tag">03 — Proyectos</span>
+                <h2 class="section-title">Mis <em>Proyectos</em></h2>
+            </div>
             <div class="projects-grid">
                 <div class="project-card animate-on-scroll">
-                    <h3>E-commerce Platform</h3>
-                    <p>Una plataforma de comercio electrónico completa construida con Next.js, React y Node.js. Incluye sistema de pagos, gestión de inventario y panel de administración.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Ver Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
+                    <div class="project-header">
+                        <div class="project-icon">🏥</div><span class="project-date">Enero 2025</span>
                     </div>
+                    <h3>Sistema de Gestión de Clínica Médica</h3>
+                    <p>Aplicación de escritorio para la gestión de citas y registros médicos digitales. Incluye base de
+                        datos normalizada en SQL Server con procedimientos almacenados optimizados e interfaz intuitiva
+                        para personal administrativo.</p>
+                    <div class="project-tags"><span>C#</span><span>SQL Server</span><span>.NET</span></div>
                 </div>
                 <div class="project-card animate-on-scroll">
-                    <h3>App de Gestión de Tareas</h3>
-                    <p>Aplicación web para gestión de tareas con funcionalidades de drag & drop, notificaciones en tiempo real y sincronización entre dispositivos.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Ver Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
+                    <div class="project-header">
+                        <div class="project-icon">🍽️</div><span class="project-date">Enero 2024</span>
                     </div>
+                    <h3>Sistema de Gestión de Restaurante</h3>
+                    <p>Aplicación de escritorio para controlar inventarios, pedidos y facturación en tiempo real.
+                        Integra seguridad en base de datos para proteger registros de ventas, con enfoque en UX para
+                        agilizar la toma de órdenes.</p>
+                    <div class="project-tags"><span>C#</span><span>SQL Server</span><span>.NET</span></div>
                 </div>
                 <div class="project-card animate-on-scroll">
-                    <h3>Dashboard Analytics</h3>
-                    <p>Dashboard interactivo para visualización de datos con gráficos dinámicos, filtros avanzados y exportación de reportes en múltiples formatos.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Ver Demo</a>
-                        <a href="#" target="_blank">GitHub</a>
+                    <div class="project-header">
+                        <div class="project-icon">🛒</div><span class="project-date">Enero 2023</span>
                     </div>
+                    <h3>Sitio Web de Electrónicos (Ecommerce)</h3>
+                    <p>Sitio web totalmente responsivo para una tienda de electrónicos. Incluye validaciones de
+                        formularios del lado del cliente y menús dinámicos, maquetado con HTML5, CSS3 y Bootstrap.</p>
+                    <div class="project-tags">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-header">
+                        <div class="project-icon">💰</div><span class="project-date">Junio 2025</span>
+                    </div>
+                    <h3>Plataforma Web de Finanzas Personales</h3>
+                    <p>Aplicación web colaborativa con Java, JSF y Facelets desplegada en Apache Tomcat. Módulos de
+                        Login seguro, Registro, control de Presupuestos y seguimiento de Metas financieras.</p>
+                    <div class="project-tags"><span>Java</span><span>JSF</span><span>Facelets</span><span>Tomcat</span>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll featured">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div><span class="project-date">Octubre 2025</span>
+                    </div>
+                    <h3>App Web de Control de Pagos</h3>
+                    <p>Single Page Application (SPA) en React para control detallado de finanzas y pagos personales.
+                        Componentes reutilizables, gestión de estado complejo, diseño responsivo y UX fluida y dinámica.
+                    </p>
+                    <div class="project-tags"><span>React</span><span>JavaScript</span><span>CSS3</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section contact-modern">
-        <div class="contact-card">
-            <!-- Columna izquierda: presentación y redes sociales -->
-            <div class="contact-left">
-                <h2 class="contact-title">Contactame<br><span class="contact-highlight">I'd love to help</span></h2>
-                <p class="contact-lead">Dando vida a las ideas a través de código, diseño y un poco de magia.</p>
-                <!-- Lista de redes sociales -->
-                <ul class="contact-socials">
-                    <li><a href="#" target="_blank"><span class="icon-linkedin"></span> LinkedIn</a></li>
-                    <li><a href="#" target="_blank"><span class="icon-instagram"></span> Instagram</a></li>
-                    <li><a href="#" target="_blank"><span class="icon-github"></span> GitHub</a></li>
-                    <li><a href="#" target="_blank"><span class="icon-facebook"></span> Facebook</a></li>
-                </ul>
-                <!-- Información de contacto directo -->
-                <div class="contact-info-block">
-                    <h3>Contact Information</h3>
-                    <div class="contact-info-row">
-                        <span class="icon-mail"></span>
-                        <span class="contact-email">URG22@gmail.com</span>
-                    </div>
-                </div>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 — Contacto</span>
+                <h2 class="section-title">Hablemos <em>:)</em></h2>
             </div>
-            <!-- Columna derecha: formulario de contacto -->
-            <form class="contact-form" autocomplete="off">
-                <label for="name">Full name</label>
-                <input type="text" id="name" name="name" placeholder="Your name here" required>
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="Your email address here" required>
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Your subject here">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message here" required></textarea>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            <div class="contact-card">
+                <div class="contact-left">
+                    <p class="contact-lead">¿Tienes un proyecto en mente o una oportunidad para mí? Estoy disponible y
+                        con muchas ganas de colaborar.</p>
+                    <ul class="contact-socials">
+                        <li><a href="https://www.linkedin.com/in/ulises-guillen-11380a261" target="_blank"><i
+                                    class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/URG022" target="_blank"><i class="fab fa-github"></i> GitHub —
+                                URG022</a></li>
+                        <li><a href="mailto:ulisesriveraguillen519@gmail.com"><i class="fas fa-envelope"></i>
+                                ulisesriveraguillen519@gmail.com</a></li>
+                        <li><a href="tel:+50364231490"><i class="fas fa-phone"></i> 6423 1490</a></li>
+                    </ul>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group"><label for="name">Nombre completo</label><input type="text" id="name"
+                            name="name" placeholder="Tu nombre" required></div>
+                    <div class="form-group"><label for="email">Correo electrónico</label><input type="email" id="email"
+                            name="email" placeholder="tu@correo.com" required></div>
+                    <div class="form-group"><label for="subject">Asunto</label><input type="text" id="subject"
+                            name="subject" placeholder="¿De qué se trata?"></div>
+                    <div class="form-group"><label for="message">Mensaje</label><textarea id="message" name="message"
+                            rows="5" placeholder="Escríbeme aquí..." required></textarea></div>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje <i
+                            class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Ulises Guillén. Todos los derechos reservados.</p>
+            <div class="footer-inner">
+                <div class="logo">URG<span class="logo-dot">.</span></div>
+                <p>© 2025 Ulises Rivera Guillén · Desarrollador de Software · El Salvador</p>
+                <div class="footer-links">
+                    <a href="https://github.com/URG022" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ulises-guillen-11380a261" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ulisesriveraguillen519@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Enlace al archivo JavaScript externo -->
     <script src="script.js"></script>
 </body>
+
 </html>
